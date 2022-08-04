@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Module: core/base-service/errors</title>
+    <title>JSDoc: Module: services/licenses</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Module: core/base-service/errors</h1>
+    <h1 class="page-title">Module: services/licenses</h1>
 
     
 
@@ -38,7 +38,7 @@
     <div class="container-overview">
     
         
-            <div class="description"><p>Standard exceptions for handling error cases</p></div>
+            <div class="description"><p>Common functions and utilities for tasks related to license badges.</p></div>
         
 
         
@@ -87,7 +87,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="core_base-service_errors.js.html">core/base-service/errors.js</a>, <a href="core_base-service_errors.js.html#line1">line 1</a>
+        <a href="services_licenses.js.html">services/licenses.js</a>, <a href="services_licenses.js.html#line1">line 1</a>
     </li></ul></dd>
     
 
@@ -126,31 +126,6 @@
     
 
     
-        <h3 class="subsection-title">Classes</h3>
-
-        <dl>
-            <dt><a href="module-core_base-service_errors-Deprecated.html">Deprecated</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-core_base-service_errors-ImproperlyConfigured.html">ImproperlyConfigured</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-core_base-service_errors-Inaccessible.html">Inaccessible</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-core_base-service_errors-InvalidParameter.html">InvalidParameter</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-core_base-service_errors-InvalidResponse.html">InvalidResponse</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-core_base-service_errors-NotFound.html">NotFound</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-core_base-service_errors-ShieldsRuntimeError.html">ShieldsRuntimeError</a></dt>
-            <dd></dd>
-        </dl>
-    
 
     
 
@@ -159,18 +134,18 @@
     
 
     
-
-    
-
-    
-        <h3 class="subsection-title">Type Definitions</h3>
+        <h3 class="subsection-title">Members</h3>
 
         
-                
-<h4 class="name" id="~RuntimeErrorProps">RuntimeErrorProps</h4>
+            
+<h4 class="name" id="~licenseToColorMap"><span class="type-signature">(inner, constant) </span>licenseToColorMap<span class="type-signature"> :object</span></h4>
 
 
 
+
+<div class="description">
+    <p>Mapping of licenses to their corresponding color and priority.</p>
+</div>
 
 
 
@@ -184,107 +159,6 @@
         </li>
     </ul>
 
-
-
-
-
-    <h5 class="subsection-title">Properties:</h5>
-
-    
-
-<table class="props">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>underlyingError</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Error</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>Exception we are wrapping (Optional)</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>response</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>Response from an upstream API to provide
-context for the error (Optional)</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>prettyMessage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>User-facing error message to override the
-value of <code>defaultPrettyMessage()</code>. This is the text that will appear on the
-badge when we catch and render the exception (Optional)</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
 
 
 
@@ -318,7 +192,7 @@ badge when we catch and render the exception (Optional)</p></td>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="core_base-service_errors.js.html">core/base-service/errors.js</a>, <a href="core_base-service_errors.js.html#line201">line 201</a>
+        <a href="services_licenses.js.html">services/licenses.js</a>, <a href="services_licenses.js.html#line102">line 102</a>
     </li></ul></dd>
     
 
@@ -334,7 +208,465 @@ badge when we catch and render the exception (Optional)</p></td>
 
 
 
+        
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
             
+
+    
+
+    
+    <h4 class="name" id="~licenseToColor"><span class="type-signature">(inner) </span>licenseToColor<span class="signature">(licenses)</span><span class="type-signature"> &rarr; {string}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Maps the license to its corresponding color and priority and sorts the list of mapped licenses by priority.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>licenses</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+|
+
+<span class="param-type">Array.&lt;string></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>License or list of licenses</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="services_licenses.js.html">services/licenses.js</a>, <a href="services_licenses.js.html#line119">line 119</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>Color corresponding to the license or the list of licenses</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~renderLicenseBadge"><span class="type-signature">(inner) </span>renderLicenseBadge<span class="signature">(attrs)</span><span class="type-signature"> &rarr; {object}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Handles rendering concerns of license badges.
+Determines the message of the badge by joining the licenses in a comma-separated format.
+Sets the badge color to the provided value, if not provided then the color is used from licenseToColorMap.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>attrs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Refer to individual attributes</p>
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>license</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>License to render, required if badge contains only one license</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>licenses</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;string></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>List of licenses to render, required if badge contains multiple licenses</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>color</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>If provided then the badge will use this color value</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="services_licenses.js.html">services/licenses.js</a>, <a href="services_licenses.js.html#line144">line 144</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>Badge with message and color properties</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+    
+
     
 
     
