@@ -4,6 +4,53 @@ Note: this changelog is for the shields.io server. The changelog for the badge-m
 
 ---
 
+## server-2023-08-01
+
+- Malicious PR [#6](https://github.com/badges/shields/issues/6)
+- Another malicious file
+- This is a malicious commit!
+- chore: fix typo in badge request template [#8254](https://github.com/badges/shields/issues/8254)
+- [GitHub] GitHub file size for a specific branch [#8262](https://github.com/badges/shields/issues/8262)
+- Changelog for Release server-2022-08-01 [#8268](https://github.com/badges/shields/issues/8268)
+- [pypi] Add Framework Version Badges support [#8261](https://github.com/badges/shields/issues/8261)
+- feat: add [GitlabForks] server [#8208](https://github.com/badges/shields/issues/8208)
+- Update PyPI api according to https://warehouse.pypa.io/api-reference/json.html [#8251](https://github.com/badges/shields/issues/8251)
+- Add [galaxytoolshed] Activity [#8164](https://github.com/badges/shields/issues/8164)
+- Fix wording in code-walkthrough.md [#8240](https://github.com/badges/shields/issues/8240)
+- Fix typo in service-tests.md [#8239](https://github.com/badges/shields/issues/8239)
+- [greasyfork] Add Greasy Fork rating badges [#8087](https://github.com/badges/shields/issues/8087)
+- Fix heroku review apps (sort of) [#8213](https://github.com/badges/shields/issues/8213)
+- Fix missing `dayjs` -> `moment` [#8204](https://github.com/badges/shields/issues/8204)
+- refactor(deps): Replace moment with dayjs [#8192](https://github.com/badges/shields/issues/8192)
+- add spaces round pipe in [conda] badge [#8189](https://github.com/badges/shields/issues/8189)
+- Add [ROS] version service [#8169](https://github.com/badges/shields/issues/8169)
+- feat: add [gitlabissues] service [#8108](https://github.com/badges/shields/issues/8108)
+- add docs on nouns in route [#8141](https://github.com/badges/shields/issues/8141)
+- Changelog for Release server-2022-07-03 [#8163](https://github.com/badges/shields/issues/8163)
+- moar fixes for [gitlab] auth [#8162](https://github.com/badges/shields/issues/8162)
+- Add [galaxytoolshed] services [#8114](https://github.com/badges/shields/issues/8114)
+- Docstrings for licenses service [#8160](https://github.com/badges/shields/issues/8160)
+- fix [gitlab] auth [#8145](https://github.com/badges/shields/issues/8145)
+- change routes for [gitlab] license and contributors badges [#8140](https://github.com/badges/shields/issues/8140)
+- ci: support new circle PR url variable [#8135](https://github.com/badges/shields/issues/8135)
+- increase cache length on AUR version badge, run [AUR] [#8110](https://github.com/badges/shields/issues/8110)
+- Use GraphQL to fix GitHub file count badges [github] [#8112](https://github.com/badges/shields/issues/8112)
+- update targets for [bower] service tests [#8107](https://github.com/badges/shields/issues/8107)
+- accept version with suffix in [ore] service tests [#8106](https://github.com/badges/shields/issues/8106)
+- style: unified self-managed gitlab instance name [#8105](https://github.com/badges/shields/issues/8105)
+- feat: add [gitlab] contributors service [#8084](https://github.com/badges/shields/issues/8084)
+- fix: display greasy fork dd correctly [#8088](https://github.com/badges/shields/issues/8088)
+- [greasyfork] Add Greasy Fork service badges [#8080](https://github.com/badges/shields/issues/8080)
+- Fix typos in endpoint badge docs [#8085](https://github.com/badges/shields/issues/8085)
+- fix: gitlab licence service docs and example [#8083](https://github.com/badges/shields/issues/8083)
+- add docstrings for endpoint-common service [#8079](https://github.com/badges/shields/issues/8079)
+- fix(gitlab service test): fix gitlab pipeline & tag(nested group) service test, run [gitlabtag gitlabpipeline] [#8076](https://github.com/badges/shields/issues/8076)
+- Add [gitlablicense] services [#8024](https://github.com/badges/shields/issues/8024)
+- [Spack] Package Manager: Update Domain [#8046](https://github.com/badges/shields/issues/8046)
+- Docstrings for dynamic-common service [#8027](https://github.com/badges/shields/issues/8027)
+- switch [jitpack] to use latestOk endpoint [#8041](https://github.com/badges/shields/issues/8041)
+- Dependency updates
+
 ## server-2022-08-01
 
 - [pypi] Add Framework Version Badges support [#8261](https://github.com/badges/shields/issues/8261)
